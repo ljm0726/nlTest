@@ -26,6 +26,10 @@ dependencies {
 	
 	implementation "org.apache.tomcat.embed:tomcat-embed-jasper"
 	implementation 'javax.servlet:jstl'
+	
+	// MyBatis Setting
+	implementation 'org.mybatis:mybatis:3.5.15'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 }
 
 tasks.named('bootBuildImage') {
