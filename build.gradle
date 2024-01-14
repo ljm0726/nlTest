@@ -19,17 +19,23 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-tomcat'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	
-	implementation 'org.projectlombok:lombok' //@Getter, @Setter, @Sfl4j 
-	
+
+	//@Getter, @Setter, @Sfl4j
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
 	implementation "org.apache.tomcat.embed:tomcat-embed-jasper"
 	implementation 'javax.servlet:jstl'
-	
-	// MyBatis Setting
-	implementation 'org.mybatis:mybatis:3.5.15'
+
+	// DB Setting
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.33' //mysql 연결 확인하기..
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2' // JDK 버전에 맞게 수정
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.15'
+
 }
 
 tasks.named('bootBuildImage') {

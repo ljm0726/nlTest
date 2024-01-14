@@ -1,4 +1,4 @@
-package com.example.demo.domain.Test.model;
+package com.example.demo.domain.Test.model.dto;
 
 import java.time.LocalDateTime;
 
@@ -12,5 +12,7 @@ public class TestDto {
 	private String message;
 	
 	private LocalDateTime regDate;
+
+	private int delFlag;
 	
 }

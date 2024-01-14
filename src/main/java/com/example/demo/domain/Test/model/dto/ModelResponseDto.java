@@ -1,11 +1,11 @@
-package com.example.demo.domain.Test.model;
+package com.example.demo.domain.Test.model.dto;
 
 import lombok.Data;
 
 @Data
 public class ModelResponseDto {
 	private Boolean state;
-	private TestDto testDto;
+	private Object testDto;
 	private String Message;
 	
 }

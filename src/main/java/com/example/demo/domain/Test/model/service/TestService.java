@@ -1,8 +1,6 @@
 package com.example.demo.domain.Test.model.service;
 
-import java.util.List;
-
-import com.example.demo.domain.Test.model.ModelResponseDto;
+import com.example.demo.domain.Test.model.dto.ModelResponseDto;
 
 public interface TestService {
 	
